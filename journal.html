@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Journal | Beky</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">beky</a>
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang__btn" data-lang="zh-TW">繁</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="en">EN</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="zh-CN">简</button>
+      </div>
+      <button class="menu-btn" id="menuOpen" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer__close" id="menuClose" aria-label="Close">×</button>
+  <ul class="drawer__list">
+    <li><a href="index.html#products" data-i18n="nav.bikes">車款</a><small>Bikes</small></li>
+    <li><a href="index.html#lifestyle" data-i18n="nav.lifestyle">折疊的生活</a><small>Lifestyle</small></li>
+    <li><a href="index.html#topics" data-i18n="nav.topics">專題</a><small>Topics</small></li>
+    <li><a href="index.html#news" data-i18n="nav.news">最新消息</a><small>News</small></li>
+    <li><a href="index.html#about" data-i18n="nav.about">關於佰客</a><small>About</small></li>
+    <li><a href="index.html#stores" data-i18n="nav.stores">門市與經銷</a><small>Stores</small></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">聯絡我們</a><small>Contact</small></li>
+  </ul>
+</nav>
+<div class="overlay" id="overlay"></div>
+
+<main class="journal">
+  <header class="journal__head">
+    <span class="label label--left journal__kicker" id="jKicker"></span>
+    <h1 id="jTitle"></h1>
+    <p class="journal__lead" id="jLead"></p>
+  </header>
+
+  <div class="journal__body" id="jBody"></div>
+
+  <p class="journal__product"><a id="jProduct" href="#"></a></p>
+
+  <section class="section">
+    <h2 class="label" data-i18n="j.related">相關文章</h2>
+    <div class="grid grid--3 grid--compact">
+      <a href="index.html#topics" class="card card--sm">
+        <div class="card__img"><img src="assets/img/scene/dog-basket.jpg" alt=""></div>
+        <span class="card__title" data-i18n="t.2.title"></span>
+      </a>
+      <a href="index.html#topics" class="card card--sm">
+        <div class="card__img"><img src="assets/img/scene/car-trunk.jpg" alt=""></div>
+        <span class="card__title" data-i18n="t.3.title"></span>
+      </a>
+      <a href="index.html#topics" class="card card--sm">
+        <div class="card__img"><img src="assets/img/scene/metro.jpg" alt=""></div>
+        <span class="card__title" data-i18n="t.4.title"></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__copy">© 2026 Beky Taiwan. All rights reserved.</p>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/journal.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  const id = new URLSearchParams(location.search).get('id');
+  const j = JOURNALS[id] || JOURNALS['summer-breeze'];
+
+  // 圖片區塊只需渲染一次
+  document.getElementById('jBody').innerHTML = j.blocks.map(b => {
+    switch (b[0]) {
+      case 'full':   return `<figure class="jb jb--full"><img src="${b[1]}" alt="" loading="lazy"></figure>`;
+      case 'pair':   return `<div class="jb jb--pair ${b[3] || 'r34'}"><figure><img src="${b[1]}" alt="" loading="lazy"></figure><figure><img src="${b[2]}" alt="" loading="lazy"></figure></div>`;
+      case 'single': return `<figure class="jb jb--single ${b[2] || 'r34'}"><img src="${b[1]}" alt="" loading="lazy"></figure>`;
+      case 'text':   return `<p class="jb jb--text" data-i18n="${b[1]}"></p>`;
+    }
+  }).join('');
+
+  function render(lang) {
+    document.getElementById('pageTitle').textContent = `${t(j.title, lang)} | Beky`;
+    document.getElementById('jKicker').textContent = t(j.kicker, lang);
+    document.getElementById('jTitle').textContent = t(j.title, lang);
+    document.getElementById('jLead').textContent = t(j.lead, lang);
+    const p = document.getElementById('jProduct');
+    p.textContent = t(j.product.label, lang);
+    p.href = `product.html?model=${j.product.model}`;
+    document.querySelectorAll('.jb--text').forEach(el => { el.textContent = t(el.dataset.i18n, lang); });
+  }
+
+  render(getLang());
+  document.addEventListener('langchange', e => render(e.detail.lang));
+})();
+</script>
+</body>
+</html>
