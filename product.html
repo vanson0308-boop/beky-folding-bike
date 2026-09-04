@@ -59,7 +59,7 @@
 <main>
   <section class="product-hero">
     <div class="product-hero__inner">
-      <div class="product-hero__img"><img id="pImg" src="" alt=""></div>
+      <div class="product-hero__img"><img id="pImg" src="" alt="" decoding="async" fetchpriority="high"></div>
       <div class="product-hero__text">
         <a href="index.html#products" class="back" data-i18n="pd.back">← 全部車款</a>
         <span class="en" id="pEn"></span>
@@ -141,7 +141,7 @@
 
     document.getElementById('pOthers').innerHTML = Object.keys(PRODUCTS).filter(k => k !== key).slice(0, 3)
       .map(k => `<a href="product.html?model=${k}" class="card card--sm">
-        <div class="card__img card__img--bike"><img src="${PRODUCTS[k].img}" alt=""></div>
+        <div class="card__img card__img--bike"><img src="${PRODUCTS[k].img}" alt="" loading="lazy" decoding="async"></div>
         <span class="card__title">${PRODUCTS[k].name[lang]}</span></a>`).join('');
   }
 

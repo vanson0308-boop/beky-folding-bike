@@ -71,15 +71,15 @@
     <h2 class="label" data-i18n="j.related">相關文章</h2>
     <div class="grid grid--3 grid--compact">
       <a href="index.html#topics" class="card card--sm">
-        <div class="card__img"><img src="assets/img/scene/dog-basket.jpg" alt=""></div>
+        <div class="card__img"><img src="assets/img/scene/dog-basket.jpg" alt="" loading="lazy" decoding="async"></div>
         <span class="card__title" data-i18n="t.2.title"></span>
       </a>
       <a href="index.html#topics" class="card card--sm">
-        <div class="card__img"><img src="assets/img/scene/car-trunk.jpg" alt=""></div>
+        <div class="card__img"><img src="assets/img/scene/car-trunk.jpg" alt="" loading="lazy" decoding="async"></div>
         <span class="card__title" data-i18n="t.3.title"></span>
       </a>
       <a href="index.html#topics" class="card card--sm">
-        <div class="card__img"><img src="assets/img/scene/metro.jpg" alt=""></div>
+        <div class="card__img"><img src="assets/img/scene/metro.jpg" alt="" loading="lazy" decoding="async"></div>
         <span class="card__title" data-i18n="t.4.title"></span>
       </a>
     </div>
@@ -121,9 +121,9 @@
   // 圖片區塊只需渲染一次
   document.getElementById('jBody').innerHTML = j.blocks.map(b => {
     switch (b[0]) {
-      case 'full':   return `<figure class="jb jb--full"><img src="${b[1]}" alt="" loading="lazy"></figure>`;
-      case 'pair':   return `<div class="jb jb--pair ${b[3] || 'r34'}"><figure><img src="${b[1]}" alt="" loading="lazy"></figure><figure><img src="${b[2]}" alt="" loading="lazy"></figure></div>`;
-      case 'single': return `<figure class="jb jb--single ${b[2] || 'r34'}"><img src="${b[1]}" alt="" loading="lazy"></figure>`;
+      case 'full':   return `<figure class="jb jb--full"><img src="${b[1]}" alt="" loading="lazy" decoding="async"></figure>`;
+      case 'pair':   return `<div class="jb jb--pair ${b[3] || 'r34'}"><figure><img src="${b[1]}" alt="" loading="lazy" decoding="async"></figure><figure><img src="${b[2]}" alt="" loading="lazy" decoding="async"></figure></div>`;
+      case 'single': return `<figure class="jb jb--single ${b[2] || 'r34'}"><img src="${b[1]}" alt="" loading="lazy" decoding="async"></figure>`;
       case 'text':   return `<p class="jb jb--text" data-i18n="${b[1]}"></p>`;
     }
   }).join('');
