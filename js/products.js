@@ -1,7 +1,7 @@
 /* 車款資料（三語）。price 留空則顯示「售價請洽門市」 */
 const PRODUCTS = {
   youth: {
-    en: 'Youth', img: 'assets/img/bikes/youth.png', price: '',
+    en: 'Youth', img: 'assets/img/bikes/youth.jpg', price: '',
     name:  { 'zh-TW': '青春', en: 'Youth', 'zh-CN': '青春' },
     desc: {
       'zh-TW': '入門型車款，車架減震、性能穩定、收納便捷。採用直拉輪組，重心更低，城市騎行更輕鬆；配備 6 速變速與耐用的推行貨架，漲鏈器設計有效減少折疊時掉鏈風險。',
@@ -24,7 +24,7 @@ const PRODUCTS = {
     ],
   },
   skyline: {
-    en: 'Skyline', img: 'assets/img/bikes/skyline.png', price: '',
+    en: 'Skyline', img: 'assets/img/bikes/skyline.jpg', price: '',
     name:  { 'zh-TW': '天際 Skyline', en: 'Skyline', 'zh-CN': '天际 Skyline' },
     desc: {
       'zh-TW': '18 吋寬胎系列，輕量升級、性能卓越。碟煞制動安全穩定，碳纖前叉輕而堅固，加大楣頭、前後開檔極致折疊；鋁合金後叉與貨架輕裝上陣，獨立變速器掛耳維護無憂。',
@@ -41,7 +41,7 @@ const PRODUCTS = {
     ],
   },
   nano: {
-    en: 'NANO', img: 'assets/img/bikes/nano.png', price: '',
+    en: 'NANO', img: 'assets/img/bikes/nano.jpg', price: '',
     name:  { 'zh-TW': 'NANO', en: 'NANO', 'zh-CN': 'NANO' },
     desc: {
       'zh-TW': '14 吋小輪組、小車型，折疊後體積小巧，適合追求輕便、小戶型的小個子選手。雙節座管設計調整了車架幾何比例，身高 1.4–1.9 m 都可以騎行；4 速系統搭配中空一體牙盤有效減重。',
@@ -61,7 +61,7 @@ const PRODUCTS = {
     ],
   },
   city: {
-    en: 'City', img: 'assets/img/bikes/city.png', price: '',
+    en: 'City', img: 'assets/img/bikes/city.jpg', price: '',
     name:  { 'zh-TW': '城市', en: 'City', 'zh-CN': '城市' },
     desc: {
       'zh-TW': '4130 鉻鉬鋼車架，剛性足、騎行穩。7 速變速系統，11–28T 後飛輪，滿足城市路面的複雜路況，適合上班通勤、休閒騎行。四層漆水工藝，防刮、防蹭、防氧化。',
@@ -85,7 +85,7 @@ const PRODUCTS = {
     ],
   },
   travel: {
-    en: 'Travel', img: 'assets/img/bikes/travel.png', price: '',
+    en: 'Travel', img: 'assets/img/bikes/travel.jpg', price: '',
     name:  { 'zh-TW': '旅行', en: 'Travel', 'zh-CN': '旅行' },
     desc: {
       'zh-TW': '搭載內 3 外 5 的 15 速變速系統，無需費心切換邏輯，流暢響應，從都市通勤到山區漫遊皆可應對。大 P 把加海綿把套，端正坐姿、長途舒適；限位座管設計，一拉就到位。',
@@ -102,7 +102,7 @@ const PRODUCTS = {
     ],
   },
   boundless: {
-    en: 'Boundless', img: 'assets/img/bikes/boundless.png', price: '',
+    en: 'Boundless', img: 'assets/img/bikes/boundless.jpg', price: '',
     name:  { 'zh-TW': '無界', en: 'Boundless', 'zh-CN': '无界' },
     desc: {
       'zh-TW': '碳纖維三刀一體輪組與碳纖維坐墊等輕量化部件，整車輕盈、破風效果好，起步與加速更靈敏。採用藍圖藍牙無線電子變速，不易跳檔，可透過手機 App 調節；7 檔變速加輕量化碳輪，爬坡能力強。',
