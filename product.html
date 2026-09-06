@@ -24,7 +24,7 @@
   <meta id="twitterDescription" name="twitter:description" content="Beky 佰客青春 16 吋折疊車，適合城市通勤與日常騎行。">
   <meta id="twitterImage" name="twitter:image" content="https://vanson0308-boop.github.io/beky-folding-bike/assets/img/bikes/youth.jpg">
   <script id="productStructuredData" type="application/ld+json"></script>
-  <link rel="stylesheet" href="css/style.css?v=20260905c">
+  <link rel="stylesheet" href="css/style.css?v=20260906a">
 </head>
 <body>
 
@@ -38,6 +38,8 @@
         <button class="lang__btn" data-lang="en">EN</button>
         <span class="lang__sep">/</span>
         <button class="lang__btn" data-lang="zh-CN">简</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="ja" aria-label="日本語">日</button>
       </div>
       <button class="menu-btn" id="menuOpen" aria-label="Menu"><span></span><span></span></button>
     </div>
@@ -92,8 +94,8 @@
   <p class="footer__copy">© 2026 Beky Taiwan. All rights reserved.</p>
 </footer>
 
-<script src="js/i18n.js?v=20260906a"></script>
-<script src="js/products.js?v=20260905c"></script>
+<script src="js/i18n.js?v=20260906b"></script>
+<script src="js/products.js?v=20260906a"></script>
 <script src="js/main.js?v=20260905c"></script>
 <script>
 (function () {
@@ -103,6 +105,28 @@
   const siteUrl = 'https://vanson0308-boop.github.io/beky-folding-bike/';
   const pageUrl = `${siteUrl}product.html?model=${encodeURIComponent(key)}`;
   const imageUrl = new URL(p.img, siteUrl).href;
+  const productPageCopy = {
+    'zh-TW': {
+      title: name => `佰客 Beky｜${name} 折疊車`,
+      description: (name, desc) => `Beky 佰客${name}折疊車。${desc}`,
+      imageAlt: name => `Beky 佰客${name}折疊車`,
+    },
+    en: {
+      title: name => `佰客 Beky | ${name} Folding Bike`,
+      description: (name, desc) => `The Beky ${name} folding bike. ${desc}`,
+      imageAlt: name => `Beky ${name} folding bike`,
+    },
+    'zh-CN': {
+      title: name => `佰客 Beky｜${name} 折叠车`,
+      description: (name, desc) => `Beky 佰客${name}折叠车。${desc}`,
+      imageAlt: name => `Beky 佰客${name}折叠车`,
+    },
+    ja: {
+      title: name => `佰客 BEKY｜${name} 折りたたみ自転車`,
+      description: (name, desc) => `BEKY（佰客）の${name}折りたたみ自転車。${desc}`,
+      imageAlt: name => `BEKY（佰客）${name} 折りたたみ自転車`,
+    },
+  };
 
   document.getElementById('canonicalUrl').href = pageUrl;
   document.getElementById('ogUrl').content = pageUrl;
@@ -119,17 +143,19 @@
   });
 
   function render(lang) {
-    const title = `佰客 Beky｜${p.name[lang]} 折疊車`;
-    const description = `Beky 佰客${p.name[lang]}折疊車。${p.desc[lang]}`;
+    const copy = productPageCopy[lang] || productPageCopy['zh-TW'];
+    const title = copy.title(p.name[lang]);
+    const description = copy.description(p.name[lang], p.desc[lang]);
+    const imageAlt = copy.imageAlt(p.name[lang]);
     document.getElementById('pageTitle').textContent = title;
     document.getElementById('pageDescription').content = description;
     document.getElementById('ogTitle').content = title;
     document.getElementById('ogDescription').content = description;
-    document.getElementById('ogImageAlt').content = `Beky 佰客${p.name[lang]}折疊車`;
+    document.getElementById('ogImageAlt').content = imageAlt;
     document.getElementById('twitterTitle').content = title;
     document.getElementById('twitterDescription').content = description;
     document.getElementById('pImg').src = p.img;
-    document.getElementById('pImg').alt = `Beky 佰客${p.name[lang]}折疊車`;
+    document.getElementById('pImg').alt = imageAlt;
     document.getElementById('pEn').textContent = p.en;
     document.getElementById('pName').textContent = p.name[lang];
     document.getElementById('pDesc').textContent = p.desc[lang];

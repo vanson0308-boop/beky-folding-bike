@@ -24,7 +24,7 @@
   <meta id="twitterDescription" name="twitter:description" content="與佰客相伴的生活。踩上 Skyline，讓車輪順著海邊小鎮的節奏前行。">
   <meta id="twitterImage" name="twitter:image" content="https://vanson0308-boop.github.io/beky-folding-bike/assets/img/girl/girl-01.jpg">
   <script id="articleStructuredData" type="application/ld+json"></script>
-  <link rel="stylesheet" href="css/style.css?v=20260905c">
+  <link rel="stylesheet" href="css/style.css?v=20260906a">
 </head>
 <body>
 
@@ -38,6 +38,8 @@
         <button class="lang__btn" data-lang="en">EN</button>
         <span class="lang__sep">/</span>
         <button class="lang__btn" data-lang="zh-CN">简</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="ja" aria-label="日本語">日</button>
       </div>
       <button class="menu-btn" id="menuOpen" aria-label="Menu"><span></span><span></span></button>
     </div>
@@ -92,7 +94,7 @@
   <p class="footer__copy">© 2026 Beky Taiwan. All rights reserved.</p>
 </footer>
 
-<script src="js/i18n.js?v=20260906a"></script>
+<script src="js/i18n.js?v=20260906b"></script>
 <script src="js/journal.js?v=20260905c"></script>
 <script src="js/main.js?v=20260905c"></script>
 <script>
@@ -103,6 +105,28 @@
   const siteUrl = 'https://vanson0308-boop.github.io/beky-folding-bike/';
   const pageUrl = `${siteUrl}journal.html?id=${encodeURIComponent(key)}`;
   const imageUrl = new URL(j.cover, siteUrl).href;
+  const journalPageCopy = {
+    'zh-TW': {
+      title: articleTitle => `佰客 Beky｜${articleTitle}`,
+      description: lead => `${lead} — Beky 佰客折疊車。`,
+      imageAlt: articleTitle => `${articleTitle}｜Beky 佰客折疊車`,
+    },
+    en: {
+      title: articleTitle => `佰客 Beky | ${articleTitle}`,
+      description: lead => `${lead} — Beky folding bikes.`,
+      imageAlt: articleTitle => `${articleTitle} | Beky folding bikes`,
+    },
+    'zh-CN': {
+      title: articleTitle => `佰客 Beky｜${articleTitle}`,
+      description: lead => `${lead} — Beky 佰客折叠车。`,
+      imageAlt: articleTitle => `${articleTitle}｜Beky 佰客折叠车`,
+    },
+    ja: {
+      title: articleTitle => `佰客 BEKY｜${articleTitle}`,
+      description: lead => `${lead} — BEKY（佰客）の折りたたみ自転車。`,
+      imageAlt: articleTitle => `${articleTitle}｜BEKY（佰客）折りたたみ自転車`,
+    },
+  };
 
   document.getElementById('canonicalUrl').href = pageUrl;
   document.getElementById('ogUrl').content = pageUrl;
@@ -131,13 +155,16 @@
   }).join('');
 
   function render(lang) {
-    const title = `佰客 Beky｜${t(j.title, lang)}`;
-    const description = `${t(j.lead, lang)} — Beky 佰客折疊車。`;
+    const copy = journalPageCopy[lang] || journalPageCopy['zh-TW'];
+    const articleTitle = t(j.title, lang);
+    const title = copy.title(articleTitle);
+    const description = copy.description(t(j.lead, lang));
+    const imageAlt = copy.imageAlt(articleTitle);
     document.getElementById('pageTitle').textContent = title;
     document.getElementById('pageDescription').content = description;
     document.getElementById('ogTitle').content = title;
     document.getElementById('ogDescription').content = description;
-    document.getElementById('ogImageAlt').content = `${t(j.title, lang)}｜Beky 佰客折疊車`;
+    document.getElementById('ogImageAlt').content = imageAlt;
     document.getElementById('twitterTitle').content = title;
     document.getElementById('twitterDescription').content = description;
     document.getElementById('jKicker').textContent = t(j.kicker, lang);

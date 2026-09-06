@@ -15,6 +15,7 @@
 }
 html[lang="zh-Hans"] { --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter, "Segoe UI", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
 html[lang="en"]      { --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif; }
+html[lang="ja"]      { --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Inter, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", Meiryo, sans-serif; }
 
 /* ===== Base ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }

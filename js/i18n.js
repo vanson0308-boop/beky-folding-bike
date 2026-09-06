@@ -1,4 +1,4 @@
-/* 三語字典：zh-TW / en / zh-CN
+/* 四語字典：zh-TW / en / zh-CN / ja
    HTML 以 data-i18n="key" 標記文字；data-i18n-content="key" 標記 content 屬性 */
 const I18N = {
   'zh-TW': {
@@ -85,6 +85,48 @@ const I18N = {
     'pd.back': '← All bikes', 'pd.colour': 'Colour', 'pd.spec': 'Specification', 'pd.price': 'Price',
     'pd.price.tba': 'Ask in store',
   },
+  'ja': {
+    'line.title': 'BEKY公式LINEを友だち追加', 'line.sub': 'QRコードを読み取るか、スマートフォンでLINEを開いて友だち追加してください。', 'line.open': 'LINEで開く',
+    'life.7': '友だちと、ゆっくり走る', 'life.8': '青信号を待つ', 'life.9': '窓辺の席',
+    'life.10': '押し歩きで、日常の中へ', 'life.11': 'エレベーターも一緒に', 'life.12': 'この子も、お出かけしたそう',
+    'j.related': '関連記事',
+    'j.sb.kicker': 'BEKYとともにある暮らし',
+    'j.sb.title': '夏のそよ風、BEKY SKYLINEとともに',
+    'j.sb.lead': '夏の午後、海風が街をゆっくりと通り抜けていく。\n\nSKYLINEに乗れば、車輪は海辺の小さな町のリズムに自然と重なる。海沿いを抜けると、風が袖のあいだをそっと通り過ぎていく。\n\n予定のない午後も、こんなに軽やかになれる。',
+    'j.sb.t1': '坂を下るときは、ペダルを踏まず、ただ風の音に耳を澄ます。',
+    'j.sb.t2': 'ひまわりがちょうど見頃。道端に自転車を止めるだけで、そこがいちばんの休息になる。',
+    'j.sb.product': 'BEKY SKYLINE 18インチ マスタードイエロー',
+    'meta.title': '佰客 BEKY 折りたたみ自転車｜毎日を、もう少し軽やかに',
+    'meta.desc': 'BEKY（佰客）折りたたみ自転車の公式サイト。16インチの青春、18インチのSKYLINE、NANOなど、街乗り・コンパクト収納・旅に適した高品質モデルをご紹介します。',
+    'nav.bikes': '自転車', 'nav.lifestyle': '折りたたみのある暮らし', 'nav.topics': '特集',
+    'nav.news': 'お知らせ', 'nav.about': 'BEKYについて', 'nav.stores': '店舗・取扱店', 'nav.contact': 'お問い合わせ',
+    'hero.title': '毎日を、もう少し軽やかに。',
+    'hero.sub': 'BEKYの折りたたみ自転車が、街との距離をちょうどよくしてくれます。',
+    'sec.more': 'その他のシリーズ',
+    'p.youth.name': '青春', 'p.youth.tag': '16インチからはじまる、やさしい一歩。最初の一台に。',
+    'p.skyline.name': 'SKYLINE', 'p.skyline.tag': '18インチのゆとりと安定感が、行ける場所をもっと遠くへ。',
+    'p.nano.name': 'NANO', 'p.nano.tag': '小さな車体に、街ひとつぶんの自由を。',
+    'p.city.name': 'CITY', 'p.travel.name': 'TRAVEL', 'p.city.tag': '日常の軌跡', 'p.travel.tag': '持ち歩ける行き先', 'p.boundless.tag': '心の広がり', 'p.boundless.name': 'BOUNDLESS',
+    't.1.title': '18インチ SKYLINE、もっと遠くへ', 't.1.sub': 'ワイドタイヤ、ディスクブレーキ、カーボンフォーク。BEKY初の一台に、遠くへ走るためのやさしい性能を。',
+    't.2.title': 'この子と、路地をゆっくりと', 't.2.sub': 'フロントバスケット、ペットキャリー、そして自転車。週末の散歩に、新しいかたちを。',
+    't.3.title': 'スマートな3ステップで、今日の移動をしまう', 't.3.sub': 'わずか10秒。移動の自由を、車のトランクへ。',
+    't.4.title': '乗り換えるたび、景色が変わる', 't.4.sub': '折りたたんで駅へ。通勤のラストワンマイルを、もう急がなくていい。',
+    'life.lead': '折りたためば、静かな佇まい。ひらけば、いつもの景色へ連れていく鍵になる。',
+    'life.1': 'コーヒーの香りとタイヤの跡', 'life.2': '軽やかに持ち上げて', 'life.3': '花束をひとつ、家まで',
+    'life.4': '日常とともに', 'life.5': '映り込む景色', 'life.6': 'いつでも、出発',
+    'feat.title': '夏のそよ風、BEKY SKYLINEとともに', 'feat.sub': 'BEKYとともにある暮らし',
+    'feat.travel.title': '自転車との旅は、遠くへ宛てた手紙を携えるように。', 'feat.travel.sub': '折りたためば、スーツケースの隣へ。新幹線でも、飛行機でも、まだ知らない曲がり角でも、静かに寄り添います。',
+    'cta.more': 'もっと見る',
+    'news.1': 'BEKY（佰客）台湾公式サイトを公開しました', 'news.2': '18インチ SKYLINE、予約受付開始', 'news.3': '週末シティスローライド：台北会場の参加受付を開始',
+    'about.body': '折りたたみ自転車の魅力は、どれだけ早く着くかではなく、「出かける」ことを呼吸のように自然にしてくれること。地下鉄に持ち込み、車のトランクに収め、お気に入りのカフェの窓辺にそっと止める。BEKYは、どの街角にも数えきれない物語が眠っていると考えています。私たちが届けたいのは、もう一度ドアを開けて外へ出たくなる、ひとつのきっかけです。',
+    'store.1.name': 'BEKY 台北フラッグシップストア', 'store.1.addr': '住所は準備中です', 'store.hours': '営業時間 11:00 – 20:00',
+    'store.2.name': '台湾各地の取扱店', 'store.2.addr': '取扱店一覧は準備中です', 'store.2.cta': '販売店になる',
+    'f.shop': '購入ガイド', 'f.shop.1': 'モデルの選び方', 'f.shop.2': '店舗での受け取り', 'f.shop.3': 'よくあるご質問',
+    'f.support': 'アフターサービス', 'f.support.1': '修理・メンテナンス', 'f.support.2': '製品保証', 'f.support.3': '折りたたみ方',
+    'f.company': '会社情報', 'f.company.1': 'BEKYについて', 'f.company.2': 'プライバシーポリシー', 'f.company.3': 'お問い合わせ',
+    'pd.back': '← すべてのモデル', 'pd.colour': 'カラー', 'pd.spec': 'スペック', 'pd.price': '販売価格',
+    'pd.price.tba': '店頭にてお問い合わせください',
+  },
   'zh-CN': {
     'line.title': '加入 Beky 官方 LINE', 'line.sub': '扫描 QR code，或在手机上直接打开 LINE 加为好友。', 'line.open': '在手机上打开 LINE',
     'life.7': '和朋友，慢慢骑', 'life.8': '等一个绿灯', 'life.9': '窗边的座位',
@@ -129,13 +171,15 @@ const I18N = {
   },
 };
 
-const LANG_ATTR = { 'zh-TW': 'zh-Hant', 'en': 'en', 'zh-CN': 'zh-Hans' };
+const LANG_ATTR = { 'zh-TW': 'zh-Hant', 'en': 'en', 'zh-CN': 'zh-Hans', 'ja': 'ja' };
+const OG_LOCALE = { 'zh-TW': 'zh_TW', 'en': 'en_US', 'zh-CN': 'zh_CN', 'ja': 'ja_JP' };
 const LANG_KEY = 'beky-lang';
 
 function getLang() {
   const saved = localStorage.getItem(LANG_KEY);
   if (saved && I18N[saved]) return saved;
   const nav = (navigator.language || '').toLowerCase();
+  if (nav.startsWith('ja')) return 'ja';
   if (nav.startsWith('en')) return 'en';
   if (nav === 'zh-cn' || nav === 'zh-sg' || nav === 'zh-hans') return 'zh-CN';
   return 'zh-TW';
@@ -150,8 +194,14 @@ function applyLang(lang) {
   if (!I18N[lang]) lang = 'zh-TW';
   localStorage.setItem(LANG_KEY, lang);
   document.documentElement.lang = LANG_ATTR[lang];
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) ogLocale.content = OG_LOCALE[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n, lang); });
   document.querySelectorAll('[data-i18n-content]').forEach(el => { el.content = t(el.dataset.i18nContent, lang); });
-  document.querySelectorAll('.lang__btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+  document.querySelectorAll('.lang__btn').forEach(b => {
+    const isActive = b.dataset.lang === lang;
+    b.classList.toggle('is-active', isActive);
+    b.setAttribute('aria-pressed', String(isActive));
+  });
   document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
 }
