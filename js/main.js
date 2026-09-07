@@ -1,11 +1,5 @@
-/* 共用互動：語言切換、側滑選單、Topics 輪播 */
+/* 共用互動：側滑選單、Topics 輪播。語系由固定網址決定，使用原生連結切換。 */
 (function () {
-  // 語言
-  document.querySelectorAll('.lang__btn').forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-  });
-  applyLang(getLang());
-
   // 側滑選單
   const drawer = document.getElementById('drawer');
   const overlay = document.getElementById('overlay');

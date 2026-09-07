@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+{{HEAD}}
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">beky</a>
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang__btn" data-lang="zh-TW">繁</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="en">EN</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="zh-CN">简</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="ja" aria-label="日本語">日</button>
+      </div>
+      <button class="menu-btn" id="menuOpen" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer__close" id="menuClose" aria-label="Close">×</button>
+  <ul class="drawer__list">
+    <li><a href="index.html#products" data-i18n="nav.bikes">車款</a><small>Bikes</small></li>
+    <li><a href="index.html#lifestyle" data-i18n="nav.lifestyle">折疊的生活</a><small>Lifestyle</small></li>
+    <li><a href="index.html#topics" data-i18n="nav.topics">專題</a><small>Topics</small></li>
+    <li><a href="index.html#news" data-i18n="nav.news">最新消息</a><small>News</small></li>
+    <li><a href="index.html#about" data-i18n="nav.about">關於佰客</a><small>About</small></li>
+    <li><a href="index.html#stores" data-i18n="nav.stores">門市與經銷</a><small>Stores</small></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">聯絡我們</a><small>Contact</small></li>
+  </ul>
+</nav>
+<div class="overlay" id="overlay"></div>
+
+<main class="journal">
+  <header class="journal__head">
+    <span class="label label--left journal__kicker" id="jKicker"></span>
+    <h1 id="jTitle"></h1>
+    <p class="journal__lead" id="jLead"></p>
+  </header>
+
+  <div class="journal__body" id="jBody"></div>
+
+  <p class="journal__product"><a id="jProduct" href="#"></a></p>
+
+  <section class="section">
+    <h2 class="label" data-i18n="j.related">相關文章</h2>
+    <div class="grid grid--3 grid--compact">
+      <a href="index.html#topics" class="card card--sm">
+        <div class="card__img"><img src="assets/img/scene/dog-basket.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="t.2.title"></span>
+      </a>
+      <a href="index.html#topics" class="card card--sm">
+        <div class="card__img"><img src="assets/img/scene/car-trunk.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="t.3.title"></span>
+      </a>
+      <a href="index.html#topics" class="card card--sm">
+        <div class="card__img"><img src="assets/img/scene/metro.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="t.4.title"></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__copy">© 2026 Beky Taiwan. All rights reserved.</p>
+</footer>
+
+{{SCRIPTS}}
+</body>
+</html>

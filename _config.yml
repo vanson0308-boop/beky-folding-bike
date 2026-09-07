@@ -1,0 +1,7 @@
+# Build sources are not public pages. Generated HTML is committed for Pages.
+exclude:
+  - templates
+  - scripts
+  - tests
+  - README.md
+  - site.config.mjs

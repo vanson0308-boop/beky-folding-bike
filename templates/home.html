@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+{{HEAD}}
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">beky</a>
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang__btn" data-lang="zh-TW">繁</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="en">EN</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="zh-CN">简</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="ja" aria-label="日本語">日</button>
+      </div>
+      <button class="menu-btn" id="menuOpen" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer__close" id="menuClose" aria-label="Close">×</button>
+  <ul class="drawer__list">
+    <li><a href="#products" data-i18n="nav.bikes">車款</a><small>Bikes</small></li>
+    <li><a href="#lifestyle" data-i18n="nav.lifestyle">折疊的生活</a><small>Lifestyle</small></li>
+    <li><a href="#topics" data-i18n="nav.topics">專題</a><small>Topics</small></li>
+    <li><a href="#news" data-i18n="nav.news">最新消息</a><small>News</small></li>
+    <li><a href="#about" data-i18n="nav.about">關於佰客</a><small>About</small></li>
+    <li><a href="#stores" data-i18n="nav.stores">門市與經銷</a><small>Stores</small></li>
+    <li><a href="#contact" data-i18n="nav.contact">聯絡我們</a><small>Contact</small></li>
+  </ul>
+  <div class="drawer__sns">
+    <h4>Official SNS</h4>
+    <a href="https://www.facebook.com/groups/1825120122235095" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="#" data-line>LINE</a>
+  </div>
+</nav>
+<div class="overlay" id="overlay"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/img/scene/hero.jpg" alt="Beky 佰客折疊車穿梭城市街景" class="hero__img" width="1800" height="1197" decoding="async" fetchpriority="high">
+    <div class="hero__text">
+      <h1 data-i18n="hero.title">把日子，踩得輕巧一些。</h1>
+      <p data-i18n="hero.sub">Beky 摺疊車，讓城市保有剛剛好的距離。</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <h2 class="label" data-i18n="sec.products">佰客折疊車系列</h2>
+    <p class="section__lead" data-i18n="products.intro"></p>
+    <div class="grid grid--3">
+      <a href="product.html?model=youth" class="card">
+        <div class="card__img card__img--bike"><img src="assets/img/bikes/youth.jpg" alt="Beky 青春" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="p.youth.name">青春</span>
+        <span class="card__sub" data-i18n="p.youth.tag">16 吋的輕柔起步，給初次相遇的你。</span>
+      </a>
+      <a href="product.html?model=skyline" class="card">
+        <div class="card__img card__img--bike"><img src="assets/img/bikes/skyline.jpg" alt="Beky 天際 Skyline" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="p.skyline.name">天際 Skyline</span>
+        <span class="card__sub" data-i18n="p.skyline.tag">18 吋的寬裕與安穩，解鎖更遠的邊界。</span>
+      </a>
+      <a href="product.html?model=nano" class="card">
+        <div class="card__img card__img--bike"><img src="assets/img/bikes/nano.jpg" alt="Beky NANO" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="p.nano.name">NANO</span>
+        <span class="card__sub" data-i18n="p.nano.tag">極小的身軀，裝得下整座城市的自在。</span>
+      </a>
+    </div>
+
+    <h3 class="label label--sm" data-i18n="sec.more">更多系列</h3>
+    <div class="grid grid--3 grid--compact">
+      <a href="product.html?model=city" class="card card--sm">
+        <div class="card__img card__img--bike"><img src="assets/img/bikes/city.jpg" alt="Beky 城市" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="p.city.name">城市</span>
+        <span class="card__sub" data-i18n="p.city.tag">日常的軌跡</span>
+      </a>
+      <a href="product.html?model=travel" class="card card--sm">
+        <div class="card__img card__img--bike"><img src="assets/img/bikes/travel.jpg" alt="Beky 旅行" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="p.travel.name">旅行</span>
+        <span class="card__sub" data-i18n="p.travel.tag">隨身的方向</span>
+      </a>
+      <a href="product.html?model=boundless" class="card card--sm">
+        <div class="card__img card__img--bike"><img src="assets/img/bikes/boundless.jpg" alt="Beky 無界" loading="lazy" decoding="async"></div>
+        <span class="card__title" data-i18n="p.boundless.name">無界</span>
+        <span class="card__sub" data-i18n="p.boundless.tag">心的寬度</span>
+      </a>
+    </div>
+  </section>
+
+  {{COMPARISON}}
+
+  <!-- TOPICS -->
+  <section class="section section--soft" id="topics">
+    <div class="section__head">
+      <h2 class="label label--left">Topics</h2>
+      <div class="carousel__nav">
+        <button class="arrow" data-dir="-1" aria-label="Previous">←</button>
+        <button class="arrow" data-dir="1" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div class="carousel" id="topicsCarousel">
+      <a href="product.html?model=skyline" class="card card--topic">
+        <div class="card__img"><img src="assets/img/scene/detail-fold.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__kicker">Product</span>
+        <span class="card__title" data-i18n="t.1.title">18" 天際，向更遠處去</span>
+        <span class="card__sub" data-i18n="t.1.sub">寬胎、碟煞與碳纖前叉。佰客首款，寫給遠方的溫柔性能。</span>
+      </a>
+      <a href="#lifestyle" class="card card--topic">
+        <div class="card__img"><img src="assets/img/scene/dog-basket.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__kicker">Lifestyle</span>
+        <span class="card__title" data-i18n="t.2.title">帶著牠，慢步巷弄間</span>
+        <span class="card__sub" data-i18n="t.2.sub">前籃、寵物包與車。週末的散步，有了新的形狀。</span>
+      </a>
+      <a href="#lifestyle" class="card card--topic">
+        <div class="card__img"><img src="assets/img/scene/car-trunk.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__kicker">How to</span>
+        <span class="card__title" data-i18n="t.3.title">俐落三步，收妥今天的行程</span>
+        <span class="card__sub" data-i18n="t.3.sub">十秒，將移動的自由放進後車廂。</span>
+      </a>
+      <a href="#lifestyle" class="card card--topic">
+        <div class="card__img"><img src="assets/img/scene/metro.jpg" alt="" loading="lazy" decoding="async"></div>
+        <span class="card__kicker">How to</span>
+        <span class="card__title" data-i18n="t.4.title">轉乘，是為了看不一樣的風景</span>
+        <span class="card__sub" data-i18n="t.4.sub">摺疊進站，讓通勤的最後一哩路不再匆忙。</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- LIFESTYLE -->
+  <section class="section" id="lifestyle">
+    <h2 class="label">With Beky</h2>
+    <p class="section__lead" data-i18n="life.lead">折疊起來，它是安靜的物件；展開時，是通往日常風景的鑰匙。</p>
+    <div class="gallery" id="lifeGallery">
+      <div class="gallery__slide is-active grid grid--3 grid--gallery">
+        <figure class="photo"><img src="assets/img/scene/cafe.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.1">咖啡香與車輪印</figcaption></figure>
+        <figure class="photo"><img src="assets/img/scene/stairs.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.2">輕巧提起</figcaption></figure>
+        <figure class="photo"><img src="assets/img/scene/flower-shop.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.3">挑一束花回家</figcaption></figure>
+        <figure class="photo"><img src="assets/img/scene/escalator.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.4">與日常同行</figcaption></figure>
+        <figure class="photo"><img src="assets/img/scene/shop-window.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.5">映出倒影</figcaption></figure>
+        <figure class="photo"><img src="assets/img/scene/ride-detail.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.6">隨時，出發</figcaption></figure>
+      </div>
+      <div class="gallery__slide grid grid--3 grid--gallery">
+        <figure class="photo"><img data-src="assets/img/scene/park-friends.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.7">和朋友，慢慢騎</figcaption></figure>
+        <figure class="photo"><img data-src="assets/img/scene/crosswalk.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.8">等一個綠燈</figcaption></figure>
+        <figure class="photo"><img data-src="assets/img/scene/window-seat.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.9">窗邊的座位</figcaption></figure>
+        <figure class="photo"><img data-src="assets/img/scene/glass-door-walk.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.10">推著它，走進日常</figcaption></figure>
+        <figure class="photo"><img data-src="assets/img/scene/elevator.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.11">一起搭電梯</figcaption></figure>
+        <figure class="photo"><img data-src="assets/img/scene/dog-ride.jpg" alt="" loading="lazy" decoding="async"><figcaption data-i18n="life.12">牠也想出門</figcaption></figure>
+      </div>
+    </div>
+    <div class="gallery__nav">
+      <button class="arrow" data-dir="-1" aria-label="Previous">←</button>
+      <div class="dots"></div>
+      <button class="arrow" data-dir="1" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <!-- SEASONAL / FEATURE BANNER -->
+  <section class="feature feature--right">
+    <img src="assets/img/girl/girl-01.jpg" alt="" class="feature__img" loading="lazy" decoding="async">
+    <div class="feature__text">
+      <span class="label label--light label--left">Seasonal Contents</span>
+      <h2 data-i18n="feat.title">夏日微風，與 BEKY SKYLINE 同行</h2>
+      <p data-i18n="feat.sub">與佰客相伴的生活</p>
+      <a href="journal.html?id=summer-breeze" class="btn btn--light" data-i18n="cta.more">View More</a>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="section" id="news">
+    <h2 class="label">News</h2>
+    <ul class="news">
+      <li><time>2026-09-01</time><span class="news__tag">News</span><a href="#about" data-i18n="news.1">Beky 佰客台灣官方網站上線</a></li>
+      <li><time>2026-08-20</time><span class="news__tag">Product</span><a href="product.html?model=skyline" data-i18n="news.2">18" 天際 Skyline 開放預購</a></li>
+    </ul>
+    <div class="center"><a href="https://www.facebook.com/groups/1825120122235095" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="news.community">社團最新動態</a></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--soft" id="about">
+    <h2 class="label">About</h2>
+    <p class="about" data-i18n="about.body">
+      折疊車的意義，不在於抵達得有多快，
+      而是讓「出門」這件事，變得像呼吸一樣自然。
+      把它帶上捷運、收進後車廂，或是隨意停在喜愛的咖啡店窗外。
+      Beky 相信，街道本來就藏著無數故事，
+      我們只是想給你一個，重新推開門走出去的理由。
+    </p>
+  </section>
+
+  <!-- STORES -->
+  <section class="section" id="stores">
+    <h2 class="label">Stores</h2>
+    <div class="grid grid--2 stores">
+      <div class="store">
+        <h3 data-i18n="store.1.name">Beky 台北旗艦店</h3>
+        <p data-i18n="store.1.addr">地址整理中</p>
+        <p class="muted" data-i18n="store.hours">營業時間 11:00 – 20:00</p>
+      </div>
+      <div class="store">
+        <h3 data-i18n="store.2.name">全台經銷據點</h3>
+        <p data-i18n="store.2.addr">名單整理中</p>
+        <a href="https://line.me/R/ti/p/@265ovlim" class="link" data-line data-i18n="store.2.cta">成為經銷商</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__col">
+      <h4 data-i18n="f.shop">購買指南</h4>
+      <a href="#compare" data-i18n="f.shop.1">如何選擇車款</a>
+      <a href="https://line.me/R/ti/p/@265ovlim" data-line data-i18n="f.shop.2">購買與交車諮詢</a>
+      <a href="https://line.me/R/ti/p/@265ovlim" data-line data-i18n="f.shop.3">其他問題諮詢</a>
+    </div>
+    <div class="footer__col">
+      <h4 data-i18n="f.support">售後服務</h4>
+      <a href="https://line.me/R/ti/p/@265ovlim" data-line data-i18n="f.support.1">維修保養諮詢</a>
+      <a href="https://line.me/R/ti/p/@265ovlim" data-line data-i18n="f.support.2">保固內容諮詢</a>
+      <a href="https://line.me/R/ti/p/@265ovlim" data-line data-i18n="f.support.3">折疊操作諮詢</a>
+    </div>
+    <div class="footer__col">
+      <h4 data-i18n="f.company">公司</h4>
+      <a href="#about" data-i18n="f.company.1">關於佰客</a>
+      <a href="#" data-line data-i18n="f.company.3">聯絡我們</a>
+    </div>
+    <div class="footer__col">
+      <h4>Official SNS</h4>
+      <a href="https://www.facebook.com/groups/1825120122235095" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="#" data-line>LINE</a>
+    </div>
+  </div>
+  <p class="footer__copy">© 2026 Beky Taiwan. All rights reserved.</p>
+</footer>
+
+<div class="modal" id="lineModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal__card">
+    <button class="modal__close" data-line-close aria-label="Close">×</button>
+    <span class="label label--left modal__kicker">LINE Official Account</span>
+    <h3 data-i18n="line.title">加入 Beky 官方 LINE</h3>
+    <p class="modal__sub" data-i18n="line.sub">掃描 QR code，或在手機上直接開啟 LINE 加入好友。</p>
+    <img src="assets/img/line-qr.png" alt="LINE QR code" class="modal__qr" loading="lazy" decoding="async">
+    <p class="modal__id">@265ovlim</p>
+    <a href="https://line.me/R/ti/p/@265ovlim" target="_blank" rel="noopener" class="btn btn--line" data-i18n="line.open">在手機上開啟 LINE</a>
+  </div>
+</div>
+
+{{SCRIPTS}}
+</body>
+</html>

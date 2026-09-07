@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+{{HEAD}}
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">beky</a>
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang__btn" data-lang="zh-TW">繁</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="en">EN</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="zh-CN">简</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" data-lang="ja" aria-label="日本語">日</button>
+      </div>
+      <button class="menu-btn" id="menuOpen" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer__close" id="menuClose" aria-label="Close">×</button>
+  <ul class="drawer__list">
+    <li><a href="index.html#products" data-i18n="nav.bikes">車款</a><small>Bikes</small></li>
+    <li><a href="index.html#lifestyle" data-i18n="nav.lifestyle">折疊的生活</a><small>Lifestyle</small></li>
+    <li><a href="index.html#topics" data-i18n="nav.topics">專題</a><small>Topics</small></li>
+    <li><a href="index.html#news" data-i18n="nav.news">最新消息</a><small>News</small></li>
+    <li><a href="index.html#about" data-i18n="nav.about">關於佰客</a><small>About</small></li>
+    <li><a href="index.html#stores" data-i18n="nav.stores">門市與經銷</a><small>Stores</small></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">聯絡我們</a><small>Contact</small></li>
+  </ul>
+</nav>
+<div class="overlay" id="overlay"></div>
+
+<main>
+  <section class="product-hero">
+    <div class="product-hero__inner">
+      <div class="product-hero__img"><img id="pImg" src="" alt="" decoding="async" fetchpriority="high"></div>
+      <div class="product-hero__text">
+        <a href="index.html#products" class="back" data-i18n="pd.back">← 全部車款</a>
+        <span class="en" id="pEn"></span>
+        <h1 id="pName"></h1>
+        <p id="pDesc"></p>
+        <p class="price"><span data-i18n="pd.price">售價</span>：<span id="pPrice"></span></p>
+        <p><a class="link" href="https://line.me/R/ti/p/@265ovlim" target="_blank" rel="noopener noreferrer" data-i18n="pd.enquire">詢問車款與購買方式</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="label" data-i18n="pd.colour">Colour</h2>
+    <div class="colors" id="pColors"></div>
+  </section>
+
+  <section class="section section--soft">
+    <h2 class="label" data-i18n="pd.spec">Specification</h2>
+    <dl class="specs" id="pSpecs"></dl>
+  </section>
+
+  <section class="section">
+    <h2 class="label" data-i18n="sec.more">更多系列</h2>
+    <div class="grid grid--3 grid--compact" id="pOthers"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__copy">© 2026 Beky Taiwan. All rights reserved.</p>
+</footer>
+
+{{SCRIPTS}}
+</body>
+</html>

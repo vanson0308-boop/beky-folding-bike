@@ -173,35 +173,5 @@ const I18N = {
 
 const LANG_ATTR = { 'zh-TW': 'zh-Hant', 'en': 'en', 'zh-CN': 'zh-Hans', 'ja': 'ja' };
 const OG_LOCALE = { 'zh-TW': 'zh_TW', 'en': 'en_US', 'zh-CN': 'zh_CN', 'ja': 'ja_JP' };
-const LANG_KEY = 'beky-lang';
-
-function getLang() {
-  const saved = localStorage.getItem(LANG_KEY);
-  if (saved && I18N[saved]) return saved;
-  const nav = (navigator.language || '').toLowerCase();
-  if (nav.startsWith('ja')) return 'ja';
-  if (nav.startsWith('en')) return 'en';
-  if (nav === 'zh-cn' || nav === 'zh-sg' || nav === 'zh-hans') return 'zh-CN';
-  return 'zh-TW';
-}
-
-function t(key, lang) {
-  const dict = I18N[lang || getLang()];
-  return (dict && dict[key]) ?? I18N['zh-TW'][key] ?? key;
-}
-
-function applyLang(lang) {
-  if (!I18N[lang]) lang = 'zh-TW';
-  localStorage.setItem(LANG_KEY, lang);
-  document.documentElement.lang = LANG_ATTR[lang];
-  const ogLocale = document.querySelector('meta[property="og:locale"]');
-  if (ogLocale) ogLocale.content = OG_LOCALE[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n, lang); });
-  document.querySelectorAll('[data-i18n-content]').forEach(el => { el.content = t(el.dataset.i18nContent, lang); });
-  document.querySelectorAll('.lang__btn').forEach(b => {
-    const isActive = b.dataset.lang === lang;
-    b.classList.toggle('is-active', isActive);
-    b.setAttribute('aria-pressed', String(isActive));
-  });
-  document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
-}
+// Build-time dictionaries only. Each published URL contains its own complete
+// language, so neither browser language nor saved preferences can replace it.
