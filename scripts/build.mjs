@@ -134,7 +134,7 @@ function comparison(lang) {
 for (const lang of Object.keys(locales)) {
   const organization = {
     '@type': 'Organization', '@id': `${siteUrl}#organization`, name: '佰客 Beky', alternateName: ['佰客', 'Beky', '佰客折疊車'],
-    url: siteUrl, logo: `${siteUrl}logo.jpg`, sameAs: ['https://www.facebook.com/groups/1825120122235095', 'https://line.me/R/ti/p/@265ovlim'],
+    url: siteUrl, logo: `${siteUrl}logo.jpg`, sameAs: ['https://www.facebook.com/groups/1825120122235095', 'https://line.me/R/ti/p/@265ovlim', 'https://shopee.tw/vansonhsu'],
   };
   let home = templates.home.replace('{{COMPARISON}}', comparison(lang));
   // Give the product photos useful, localized alternate text.

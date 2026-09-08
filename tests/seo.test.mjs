@@ -115,5 +115,7 @@ test('verification file is preserved and unconfirmed venue placeholders are abse
     assert.ok(!/地址整理中|台北旗艦店|Taipei Flagship|11:00 – 20:00/.test(html));
     assert.ok(html.includes('https://www.facebook.com/groups/1825120122235095'));
     assert.ok(html.includes('https://line.me/R/ti/p/@265ovlim'));
+    assert.equal((html.match(/https:\/\/shopee\.tw\/vansonhsu/g) || []).length, 3);
+    assert.ok(!html.includes('fbclid='));
   }
 });
